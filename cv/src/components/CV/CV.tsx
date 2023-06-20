@@ -63,5 +63,11 @@ export const CV = ({}: CVProps) => {
 
 const styles = {
   container: {
+    marginLeft: "auto",
+    marginRight: "auto",
+    paddingLeft: "15px",
+    paddingRight: "15px",
+    width: "100%",
+    maxWidth: "1140px",
   },
 };
