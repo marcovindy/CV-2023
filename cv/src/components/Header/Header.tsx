@@ -9,7 +9,7 @@ const styles = {
     padding: "16px",
     backgroundColor: "#f2f2f2",
   },
-  logo: {
+  logoContainer: {
     width: "40px",
     marginRight: "8px",
   },
@@ -44,7 +44,9 @@ export const Header = ({
 
   return (
     <header className={css(styles.header)}>
-      <Logo className={css(styles.logo)} />
+      <div className={css(styles.logoContainer)}>
+        <Logo />
+      </div>
       <nav className={css(styles.nav)}>
         <ul>
           <li>
