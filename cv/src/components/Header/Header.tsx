@@ -1,6 +1,6 @@
 import React from "react";
 import { useFela } from "react-fela";
-import Logo from "../../assets/images/logo/logo.svg";
+import Logo from "../../assets/images/logo/Logo";
 
 const styles = {
   header: {
@@ -8,18 +8,23 @@ const styles = {
     alignItems: "center",
     padding: "16px",
     backgroundColor: "#f2f2f2",
+    justifyContent: "space-between",
   },
   logoContainer: {
-    width: "40px",
+    width: "100px",
     marginRight: "8px",
   },
   nav: {
+    display: "flex",
+  },
+  ul: {
     display: "flex",
     listStyle: "none",
     marginLeft: "auto",
   },
   menuItem: {
-    marginLeft: "16px",
+    width: "100%",
+    padding: "0.5rem",
   },
 };
 
@@ -45,10 +50,10 @@ export const Header = ({
   return (
     <header className={css(styles.header)}>
       <div className={css(styles.logoContainer)}>
-        <Logo />
+        <Logo w={100} h={100} />
       </div>
       <nav className={css(styles.nav)}>
-        <ul>
+        <ul className={css(styles.ul)}>
           <li>
             <a
               href="#personalInfo"
@@ -108,3 +113,5 @@ export const Header = ({
     </header>
   );
 };
+
+export default Header;
