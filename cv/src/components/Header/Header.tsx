@@ -1,14 +1,20 @@
 import React from "react";
 import { useFela } from "react-fela";
+import { Link } from "react-scroll";
 import Logo from "../../assets/images/logo/Logo";
 
 const styles = {
   header: {
     display: "flex",
+    position: "fixed",
+    top: 0, 
+    left: 0, 
+    width: "100%", 
     alignItems: "center",
     padding: "16px",
     backgroundColor: "#f2f2f2",
     justifyContent: "space-between",
+    zIndex: 9999, 
   },
   logoContainer: {
     width: "100px",
@@ -55,58 +61,70 @@ export const Header = ({
       <nav className={css(styles.nav)}>
         <ul className={css(styles.ul)}>
           <li>
-            <a
-              href="#personalInfo"
-              onClick={onPersonalInfoClick}
+            <Link
+              to="personalInfo"
+              smooth={true}
+              spy={true}
               className={css(styles.menuItem)}
+              onClick={onPersonalInfoClick}
             >
               Personal Info
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#education"
-              onClick={onEducationClick}
+            <Link
+              to="education"
+              smooth={true}
+              spy={true}
               className={css(styles.menuItem)}
+              onClick={onEducationClick}
             >
               Education
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#workExperience"
-              onClick={onWorkExperienceClick}
+            <Link
+              to="workExperience"
+              smooth={true}
+              spy={true}
               className={css(styles.menuItem)}
+              onClick={onWorkExperienceClick}
             >
               Work Experience
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#skills"
-              onClick={onSkillsClick}
+            <Link
+              to="skills"
+              smooth={true}
+              spy={true}
               className={css(styles.menuItem)}
+              onClick={onSkillsClick}
             >
               Skills
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#projects"
-              onClick={onProjectsClick}
+            <Link
+              to="projects"
+              smooth={true}
+              spy={true}
               className={css(styles.menuItem)}
+              onClick={onProjectsClick}
             >
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#contact"
-              onClick={onContactClick}
+            <Link
+              to="contact"
+              smooth={true}
+              spy={true}
               className={css(styles.menuItem)}
+              onClick={onContactClick}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

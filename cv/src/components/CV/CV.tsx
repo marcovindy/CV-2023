@@ -14,7 +14,6 @@ export interface CVProps {}
 export const CV = ({}: CVProps) => {
   const { css } = useFela();
 
-  // Reference na jednotlivé sekce pro plynulé scrollování
   const personalInfoRef = useRef<HTMLDivElement>(null);
   const educationRef = useRef<HTMLDivElement>(null);
   const workExperienceRef = useRef<HTMLDivElement>(null);
@@ -64,6 +63,5 @@ export const CV = ({}: CVProps) => {
 
 const styles = {
   container: {
-    // Styly pro kontejner životopisu
   },
 };
